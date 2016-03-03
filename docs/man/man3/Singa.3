@@ -1,0 +1,109 @@
+.TH "Singa" 3 "Thu Mar 3 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Singa \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Singa\&.h>\fP
+.PP
+Inherits \fBKarnivor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSinga\fP ()"
+.br
+.ti -1c
+.RI "\fBSinga\fP (int _Power, int _Usia, int _Posisi, int _ArahGerak, int _Id)"
+.br
+.ti -1c
+.RI "\fB~Singa\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetId\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetUsia\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetPosisi\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetArahGerak\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetArahGerak\fP (int _ArahGerak)"
+.br
+.ti -1c
+.RI "void \fBSetPosisi\fP (int _Posisi)"
+.br
+.ti -1c
+.RI "void \fBSetUsia\fP (int _usia)"
+.br
+.ti -1c
+.RI "void \fBkill\fP (int _id)"
+.br
+.ti -1c
+.RI "void \fBdestruct\fP ()"
+.br
+.ti -1c
+.RI "void \fBmove\fP ()"
+.br
+.ti -1c
+.RI "void \fBgrouping\fP ()"
+.br
+.ti -1c
+.RI "void \fBfight\fP (\fBKarnivor\fP *K)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Kelas yang merepresantikan singa dan beberapa sifatnya 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Singa::Singa ()"
+Public Method that implement virtual function from parents class 
+.SS "Singa::Singa (int _Power, int _Usia, int _Posisi, int _ArahGerak, int _Id)"
+Standard constructor, give default value of power, usia, posisi, arahgerak, id 
+.SS "Singa::~Singa ()"
+Params constructor where you have to give all the parameter manually 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Singa::destruct ()\fC [virtual]\fP"
+Kill other creature, invoke other creature \fBdestruct()\fP 
+.PP
+Implements \fBMakhluk\fP\&.
+.SS "void Singa::fight (\fBKarnivor\fP * K)\fC [virtual]\fP"
+When singa meet other singa, they'll form a group 
+.PP
+Implements \fBKarnivor\fP\&.
+.SS "int Singa::GetArahGerak ()"
+Return Posisi of singa 
+.SS "int Singa::GetId ()"
+destructor, no delete[] because there's no pointer data\&. 
+.SS "int Singa::GetPosisi ()"
+Return Usia of singa 
+.SS "int Singa::GetUsia ()"
+Return Id of a \fBSinga\fP 
+.SS "void Singa::grouping ()\fC [virtual]\fP"
+Move the \fBSinga\fP 
+.PP
+Implements \fBHewan\fP\&.
+.SS "void Singa::move ()\fC [virtual]\fP"
+Destruct because death by age or killed by other creature 
+.PP
+Implements \fBHewan\fP\&.
+.SS "void Singa::SetArahGerak (int _ArahGerak)"
+Return ArahGerak of singa 
+.SS "void Singa::SetPosisi (int _Posisi)"
+change ArahGerak, will be useful for \fBfight()\fP function 
+.SS "void Singa::SetUsia (int _usia)"
+Set Posisi of singa 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.
