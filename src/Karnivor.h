@@ -5,10 +5,11 @@ using namespace std;
 class Karnivor : public Hewan{
   public:
    Karnivor();
-   void move(){cout<<"bergerak"<<endl;}
-   void kill(){cout<<"kill"<<endl;}
-   void destruct(){cout<<"destruct"<<endl;}
+  /* virtual void move(){cout<<"bergerak"<<endl;}
+   virtual void kill(){cout<<"kill"<<endl;}
+   virtual void destruct(){cout<<"destruct"<<endl;}*/
+   virtual void fight()=0;
    private:
-    int id;
+   // int id;
 
 };
