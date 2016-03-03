@@ -2,12 +2,18 @@
 
 class Singa : public Karnivor{
   public:
-    Singa(int Power,int Usia, int PosisiAwal, int ArahGerak, int Id);
+    Singa(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id);
     ~Singa();
-    void Kill(int id);
+
+    int GetId();
+    int GetUsia();
+    int GetPosisi();
+    int GetArahGerak();
+    void SetArahGerak();
+    void Kill(int _id);
     void Destruct();
     void Move();
     void Grouping();
   private:
-
+    int Id;
 };
