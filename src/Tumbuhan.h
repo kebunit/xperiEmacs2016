@@ -1,6 +1,6 @@
 #include "Makhluk.h"
 
-class Tubuhan : public Makhluk{
+class Tumbuhan : public Makhluk{
   public:
    //virtual void move()=0;
    virtual void Seed()=0;

@@ -10,7 +10,7 @@ Singa::Singa(){
   ArahGerak = 2;
   Id = 1;
 
-  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<Posisi<<"ArahGerak: "<<ArahGerak<<"Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<Posisi<<" ArahGerak: "<<ArahGerak<<" Id: "<<Id<<endl;
   cout <<"ctor"<<endl;
 
 }
@@ -28,6 +28,7 @@ Singa::Singa(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id){
 Singa::~Singa(){
   cout<<"Singa Id: "<<Id<<" Telah meninggal"<<endl;
 }
+
  void Singa::kill(int _id){
    cout<<"Dummy kill, will implement thread to invoke other Makhluk destruct()"<<endl;
 }
@@ -39,7 +40,6 @@ void Singa::destruct(){
   }
 }
 void Singa::move(){
-
     switch(this->ArahGerak){
     case 1:
       Posisi = Posisi+1 ;

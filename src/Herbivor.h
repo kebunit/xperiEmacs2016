@@ -8,7 +8,7 @@ class Herbivor : public Hewan{
   /* virtual void move(){cout<<"bergerak"<<endl;}
    virtual void kill(){cout<<"kill"<<endl;}
    virtual void destruct(){cout<<"destruct"<<endl;}*/
-   virtual void pass()=0;
+   virtual void Pass(Herbivor *H)=0;
    private:
    // int id;
 
