@@ -7,13 +7,13 @@
 
 class Rumput : public Tumbuhan{
       /**
-     * Public Method that implement virtual function from parents class
+     * Public Method that implement  function from parents class
      */
  public:
   Rumput();    /**
      * Standard constructor, give default value of power, usia, posisi, arahgerak, id
      */
-    Rumput(int _Power,int _Usia, int _Posisi,int _Id);    /**
+    Rumput(int _PosisiX,int _PossiY,int _Id);    /**
      * Params constructor where you have to give all the parameter manually
      */
     ~Rumput();    /**
@@ -25,12 +25,18 @@ class Rumput : public Tumbuhan{
     int GetUsia();    /**
      * Return Usia of Rumput
      */
-    int GetPosisi();    /**
-     * Return Posisi of Rumput
-     */
-    void SetPosisi(int _Posisi);    /**
-     * Set Posisi of Rumput
-     */
+      int GetPosisiX();    /**
+      * Return Posisi of Kuda
+      */
+       int GetPosisiY();    /**
+       * Return Posisi of Kuda
+       */
+        void SetPosisiX(int _PosisiX);    /**
+        * Set Posisi of Kuda
+        */
+         void SetPosisiY(int _PosisiY);    /**
+         * Set Posisi of Kuda
+         */
     void SetUsia(int _usia);
     void kill(int _id);    /**
      * Kill other creature, invoke other creature destruct()
@@ -41,6 +47,7 @@ class Rumput : public Tumbuhan{
         void Seed();    /**
      * when Rumput meet other Tumbuhan that isn't Rumput, they'll fight
      */
+      int GetPower();
   private:
     int Id;    /**
      *Unique id of Rumput

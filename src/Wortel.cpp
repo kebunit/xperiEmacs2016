@@ -4,25 +4,27 @@
 
 
 Wortel::Wortel(){
-  Power = 10;
-  Usia = 10;
-  Posisi = 2;
+  Power = 5;
+  Usia = 60;
+  PosisiX = 2;
+  PosisiY=2;
   //ArahGerak = 2;
   Id = 1;
 
-  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<Posisi<<" Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<PosisiX<<" PosisiY :"<<PosisiY<<" Id: "<<Id<<endl;
   cout <<"ctor"<<endl;
 
 }
 
-Wortel::Wortel(int _Power,int _Usia, int _Posisi, int _Id){
-  Power = _Power;
-  Usia = _Usia;
-  Posisi = _Posisi;
+Wortel::Wortel(int _PosisiX,int _PosisiY, int _Id){
+  Power = 5;
+  Usia = 60;
+  PosisiX = _PosisiX;
+  PosisiY = _PosisiY;
 //  ArahGerak = _ArahGerak;
   Id = _Id;
 
-  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<Posisi<<"Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<PosisiX<<"Id: "<<Id<<endl;
 }
 
 Wortel::~Wortel(){
@@ -47,18 +49,33 @@ int Wortel::GetId(){
 int Wortel::GetUsia(){
   return Usia;
 }
-int Wortel::GetPosisi(){
-  return Posisi;
+int Wortel::GetPosisiX(){
+  return PosisiX;
 }
-void Wortel::SetPosisi(int _Posisi){
-  Posisi = _Posisi;
+int Wortel::GetPosisiY(){
+  return PosisiY;
 }
+void Wortel::SetPosisiX(int _PosisiX){
+  PosisiX = _PosisiX;
+}
+void Wortel::SetPosisiY(int _PosisiY){
+  PosisiY = _PosisiY;
+}
+
 
 void Wortel::SetUsia(int _usia){
   Usia = _usia;
 }
 
-int main(){
+void Wortel::Seed(){
+
+}
+
+int Wortel::GetPower(){
+  return Power;
+}
+
+/*int main(){
   cout <<"Ini Wortel S -> ";
   Wortel S;
   cout<<"Ini Wortel S1 -> ";
@@ -77,4 +94,4 @@ int main(){
   }
 
   return 0;
-}
+}*/

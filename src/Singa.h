@@ -13,7 +13,7 @@ class Singa : public Karnivor{
   Singa();    /**
      * Standard constructor, give default value of power, usia, posisi, arahgerak, id
      */
-    Singa(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id);    /**
+    Singa(int _PosisiX,int _PosisiY, int _ArahGerak, int _Id);    /**
      * Params constructor where you have to give all the parameter manually
      */
     ~Singa();    /**
@@ -25,18 +25,24 @@ class Singa : public Karnivor{
     int GetUsia();    /**
      * Return Usia of singa
      */
-    int GetPosisi();    /**
-     * Return Posisi of singa
+     int GetPosisiX();    /**
+      * Return Posisi of Jerapah
+      */
+      int GetPosisiY();    /**
+       * Return Posisi of Jerapah
+       */
+    void SetPosisiX(int _PosisiX);    /**
+     * Set Posisi of Jerapah
      */
+     void SetPosisiY(int _PosisiY);    /**
+      * Set Posisi of Jerapah*/
     int GetArahGerak();    /**
      * Return ArahGerak of singa
      */
     void SetArahGerak(int _ArahGerak);    /**
      * change ArahGerak, will be useful for fight() function
      */
-    void SetPosisi(int _Posisi);    /**
-     * Set Posisi of singa
-     */
+
     void SetUsia(int _usia);
     void kill(int _id);    /**
      * Kill other creature, invoke other creature destruct()
@@ -53,6 +59,7 @@ class Singa : public Karnivor{
     void fight(Karnivor *K);    /**
      * when singa meet other karnivor that isn't singa, they'll fight
      */
+      int GetPower();
   private:
     int Id;    /**
      *Unique id of singa

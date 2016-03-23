@@ -4,25 +4,27 @@
 
 
 Kuda::Kuda(){
-  Power = 10;
-  Usia = 10;
-  Posisi = 2;
+  Power=7;
+  Usia=75;
+  PosisiX = 2;
+  PosisiY=2;
   ArahGerak = 2;
   Id = 1;
 
-  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<Posisi<<" ArahGerak: "<<ArahGerak<<" Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" PosisiX :"<<PosisiX<<" PosisiY :"<<PosisiY<<" ArahGerak: "<<ArahGerak<<" Id: "<<Id<<endl;
   cout <<"ctor"<<endl;
 
 }
 
-Kuda::Kuda(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id){
-  Power = _Power;
-  Usia = _Usia;
-  Posisi = _Posisi;
+Kuda::Kuda(int _PosisiX,int _PosisiY, int _ArahGerak, int _Id){
+  Power=7;
+  Usia=75;
+  PosisiX = _PosisiX;
+  PosisiY = _PosisiY;
   ArahGerak = _ArahGerak;
   Id = _Id;
 
-  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<Posisi<<"ArahGerak: "<<ArahGerak<<"Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia:"<<Usia<<", Posisi :"<<PosisiX<<" PosisiY :"<<PosisiY<<", ArahGerak: "<<ArahGerak<<"Id: "<<Id<<endl;
 }
 
 Kuda::~Kuda(){
@@ -42,28 +44,28 @@ void Kuda::destruct(){
 void Kuda::move(){
     switch(this->ArahGerak){
     case 1:
-      Posisi = Posisi+1 ;
+      PosisiX = PosisiX+1 ;
       break;
   case 2:
-    Posisi = Posisi+2 ;
+    PosisiX = PosisiX+2 ;
     break;
   case 3:
-    Posisi = Posisi+3 ;
+    PosisiX = PosisiX+3 ;
     break;
   case 4:
-    Posisi = Posisi+4 ;
+    PosisiX = PosisiX+4 ;
     break;
     case -1:
-      Posisi = Posisi-1 ;
+      PosisiX = PosisiX-1 ;
       break;
   case -2:
-    Posisi = Posisi-2 ;
+    PosisiX = PosisiX-2 ;
     break;
   case -3:
-    Posisi = Posisi-3 ;
+    PosisiX = PosisiX-3 ;
     break;
   case -4:
-    Posisi = Posisi-4 ;
+    PosisiX = PosisiX-4 ;
     break;
     this_thread::sleep_for(chrono::milliseconds(2000));
 }
@@ -82,8 +84,11 @@ int Kuda::GetId(){
 int Kuda::GetUsia(){
   return Usia;
 }
-int Kuda::GetPosisi(){
-  return Posisi;
+int Kuda::GetPosisiX(){
+  return PosisiX;
+}
+int Kuda::GetPosisiY(){
+  return PosisiY;
 }
 int Kuda::GetArahGerak(){
   return ArahGerak;
@@ -91,14 +96,21 @@ int Kuda::GetArahGerak(){
 void Kuda::SetArahGerak(int _ArahGerak){
   ArahGerak=_ArahGerak;
 }
-void Kuda::SetPosisi(int _Posisi){
-  Posisi = _Posisi;
+void Kuda::SetPosisiX(int _PosisiX){
+  PosisiX = _PosisiX;
 }
 
+void Kuda::SetPosisiY(int _PosisiY){
+  PosisiY= _PosisiY;
+}
 void Kuda::SetUsia(int _usia){
   Usia = _usia;
 }
 
+int Kuda::GetPower(){
+  return Power;
+}
+/*
 int main(){
   cout <<"Ini Kuda S -> ";
   Kuda S;
@@ -124,4 +136,4 @@ int main(){
   }
 
   return 0;
-}
+}*/

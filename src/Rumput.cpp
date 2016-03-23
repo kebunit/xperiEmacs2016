@@ -4,25 +4,27 @@
 
 
 Rumput::Rumput(){
-  Power = 10;
-  Usia = 10;
-  Posisi = 2;
+  Power=6;
+  Usia=90;
+  PosisiX = 2;
+  PosisiY=2;
   //ArahGerak = 2;
   Id = 1;
 
-  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<Posisi<<" Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<PosisiX<<" PosisiY :"<<PosisiY<<" Id: "<<Id<<endl;
   cout <<"ctor"<<endl;
 
 }
 
-Rumput::Rumput(int _Power,int _Usia, int _Posisi, int _Id){
-  Power = _Power;
-  Usia = _Usia;
-  Posisi = _Posisi;
+Rumput::Rumput(int _PosisiX,int _PosisiY, int _Id){
+  Power=6;
+  Usia=90;
+  PosisiX = _PosisiX;
+  PosisiY = _PosisiY;
 //  ArahGerak = _ArahGerak;
   Id = _Id;
 
-  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<Posisi<<"Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<PosisiX<<" PosisiY :"<<PosisiY<<"Id: "<<Id<<endl;
 }
 
 Rumput::~Rumput(){
@@ -47,17 +49,31 @@ int Rumput::GetId(){
 int Rumput::GetUsia(){
   return Usia;
 }
-int Rumput::GetPosisi(){
-  return Posisi;
+int Rumput::GetPosisiX(){
+  return PosisiX;
 }
-void Rumput::SetPosisi(int _Posisi){
-  Posisi = _Posisi;
+int Rumput::GetPosisiY(){
+  return PosisiY;
+}
+void Rumput::SetPosisiX(int _PosisiX){
+  PosisiX = _PosisiX;
+}
+void Rumput::SetPosisiY(int _PosisiY){
+  PosisiY = _PosisiY;
 }
 
 void Rumput::SetUsia(int _usia){
   Usia = _usia;
 }
 
+void Rumput::Seed(){
+
+}
+
+int Rumput::GetPower(){
+  return Power;
+}
+/*
 int main(){
   cout <<"Ini Rumput S -> ";
   Rumput S;
@@ -77,4 +93,4 @@ int main(){
   }
 
   return 0;
-}
+}*/

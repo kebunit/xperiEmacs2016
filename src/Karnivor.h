@@ -2,6 +2,8 @@
 #include <iostream>
 
 using namespace std;
+#ifndef KARNIVOR_H
+#define KARNIVOR_H
 class Karnivor : public Hewan{
   public:
   // Karnivor();
@@ -13,3 +15,4 @@ class Karnivor : public Hewan{
    // int id;
 
 };
+#endif

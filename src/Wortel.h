@@ -13,7 +13,7 @@ class Wortel : public Tumbuhan{
   Wortel();    /**
      * Standard constructor, give default value of power, usia, posisi, arahgerak, id
      */
-    Wortel(int _Power,int _Usia, int _Posisi,int _Id);    /**
+    Wortel(int _PosisiX,int _PosisiY,int _Id);    /**
      * Params constructor where you have to give all the parameter manually
      */
     ~Wortel();    /**
@@ -25,12 +25,17 @@ class Wortel : public Tumbuhan{
     int GetUsia();    /**
      * Return Usia of Wortel
      */
-    int GetPosisi();    /**
-     * Return Posisi of Wortel
+     int GetPosisiX();    /**
+      * Return Posisi of Jerapah
+      */
+      int GetPosisiY();    /**
+       * Return Posisi of Jerapah
+       */
+    void SetPosisiX(int _PosisiX);    /**
+     * Set Posisi of Jerapah
      */
-    void SetPosisi(int _Posisi);    /**
-     * Set Posisi of Wortel
-     */
+     void SetPosisiY(int _PosisiY);    /**
+      * Set Posisi of Jerapah*/
     void SetUsia(int _usia);
     void kill(int _id);    /**
      * Kill other creature, invoke other creature destruct()
@@ -41,6 +46,7 @@ class Wortel : public Tumbuhan{
         void Seed();    /**
      * when Wortel meet other Tumbuhan that isn't Wortel, they'll fight
      */
+      int GetPower();
   private:
     int Id;    /**
      *Unique id of Wortel

@@ -4,25 +4,27 @@
 
 
 Jerapah::Jerapah(){
-  Power = 10;
-  Usia = 10;
-  Posisi = 2;
+  Power=8;
+  Usia=70;
+  PosisiX = 2;
+  PosisiY=2;
   ArahGerak = 2;
   Id = 1;
 
-  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<Posisi<<" ArahGerak: "<<ArahGerak<<" Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<PosisiX<<" PosisiY :"<<PosisiY<<" ArahGerak: "<<ArahGerak<<" Id: "<<Id<<endl;
   cout <<"ctor"<<endl;
 
 }
 
-Jerapah::Jerapah(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id){
-  Power = _Power;
-  Usia = _Usia;
-  Posisi = _Posisi;
+Jerapah::Jerapah(int _PosisiX,int _PosisiY, int _ArahGerak, int _Id){
+  Power=8;
+  Usia=70;
+  PosisiX = _PosisiX;
+  PosisiY = _PosisiY;
   ArahGerak = _ArahGerak;
   Id = _Id;
 
-  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<Posisi<<"ArahGerak: "<<ArahGerak<<"Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<PosisiX<<" PosisiY :"<<PosisiY<<"ArahGerak: "<<ArahGerak<<"Id: "<<Id<<endl;
 }
 
 Jerapah::~Jerapah(){
@@ -42,33 +44,32 @@ void Jerapah::destruct(){
 void Jerapah::move(){
     switch(this->ArahGerak){
     case 1:
-      Posisi = Posisi+1 ;
+      PosisiX = PosisiX+1 ;
       break;
   case 2:
-    Posisi = Posisi+2 ;
+    PosisiX = PosisiX+2 ;
     break;
   case 3:
-    Posisi = Posisi+3 ;
+    PosisiX = PosisiX+3 ;
     break;
   case 4:
-    Posisi = Posisi+4 ;
+    PosisiX = PosisiX+4 ;
     break;
     case -1:
-      Posisi = Posisi-1 ;
+      PosisiX = PosisiX-1 ;
       break;
   case -2:
-    Posisi = Posisi-2 ;
+    PosisiX = PosisiX-2 ;
     break;
   case -3:
-    Posisi = Posisi-3 ;
+    PosisiX = PosisiX-3 ;
     break;
   case -4:
-    Posisi = Posisi-4 ;
+    PosisiX = PosisiX-4 ;
     break;
     this_thread::sleep_for(chrono::milliseconds(2000));
 }
 }
-
 void Jerapah::Pass(Herbivor *K){
   cout <<"will implemented with Jerapah class using thread"<<endl;
 }
@@ -82,24 +83,35 @@ int Jerapah::GetId(){
 int Jerapah::GetUsia(){
   return Usia;
 }
-int Jerapah::GetPosisi(){
-  return Posisi;
+int Jerapah::GetPosisiX(){
+  return PosisiX;
+}
+int Jerapah::GetPosisiY(){
+  return PosisiY;
+}
+void Jerapah::SetPosisiX(int _PosisiX){
+  PosisiX = _PosisiX;
+}
+void Jerapah::SetPosisiY(int _PosisiY){
+  PosisiY = _PosisiY;
 }
 int Jerapah::GetArahGerak(){
   return ArahGerak;
 }
+
+int Jerapah::GetPower(){
+  return Power;
+}
+
 void Jerapah::SetArahGerak(int _ArahGerak){
   ArahGerak=_ArahGerak;
-}
-void Jerapah::SetPosisi(int _Posisi){
-  Posisi = _Posisi;
 }
 
 void Jerapah::SetUsia(int _usia){
   Usia = _usia;
 }
 
-int main(){
+/*int main(){
   cout <<"Ini Jerapah S -> ";
   Jerapah S;
   cout<<"Ini Jerapah S1 -> ";
@@ -125,3 +137,4 @@ int main(){
 
   return 0;
 }
+*/

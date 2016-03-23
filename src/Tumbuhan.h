@@ -1,5 +1,7 @@
 #include "Makhluk.h"
 
+#ifndef TUMBUHAN_H
+#define TUMBUHAN_H
 class Tumbuhan : public Makhluk{
   public:
    //virtual void move()=0;
@@ -8,3 +10,4 @@ class Tumbuhan : public Makhluk{
   private:
    //int ArahGerak;
 };
+#endif

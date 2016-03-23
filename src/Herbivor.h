@@ -1,6 +1,8 @@
 #include "Hewan.h"
 #include <iostream>
 
+#ifndef HERBIVOR_H
+#define HERBIVOR_H
 using namespace std;
 class Herbivor : public Hewan{
   public:
@@ -13,3 +15,4 @@ class Herbivor : public Hewan{
    // int id;
 
 };
+#endif

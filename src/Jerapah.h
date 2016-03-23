@@ -13,7 +13,7 @@ class Jerapah : public Herbivor{
   Jerapah();    /**
      * Standard constructor, give default value of power, usia, posisi, arahgerak, id
      */
-    Jerapah(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id);    /**
+    Jerapah(int _PosisiX, int _PosisiY, int _ArahGerak, int _Id);    /**
      * Params constructor where you have to give all the parameter manually
      */
     ~Jerapah();    /**
@@ -25,18 +25,24 @@ class Jerapah : public Herbivor{
     int GetUsia();    /**
      * Return Usia of Jerapah
      */
-    int GetPosisi();    /**
-     * Return Posisi of Jerapah
-     */
+
     int GetArahGerak();    /**
      * Return ArahGerak of Jerapah
      */
     void SetArahGerak(int _ArahGerak);    /**
      * change ArahGerak, will be useful for fight() function
      */
-    void SetPosisi(int _Posisi);    /**
+     int GetPosisiX();    /**
+      * Return Posisi of Jerapah
+      */
+      int GetPosisiY();    /**
+       * Return Posisi of Jerapah
+       */
+    void SetPosisiX(int _PosisiX);    /**
      * Set Posisi of Jerapah
      */
+     void SetPosisiY(int _PosisiY);    /**
+      * Set Posisi of Jerapah*/
     void SetUsia(int _usia);
     void kill(int _id);    /**
      * Kill other creature, invoke other creature destruct()
@@ -53,6 +59,7 @@ class Jerapah : public Herbivor{
     void Pass(Herbivor *K);    /**
      * when Jerapah meet other Herbivor that isn't Jerapah, they'll fight
      */
+ int GetPower();
   private:
     int Id;    /**
      *Unique id of Jerapah

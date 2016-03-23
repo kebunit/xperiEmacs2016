@@ -4,25 +4,27 @@
 
 
 Singa::Singa(){
-  Power = 10;
-  Usia = 10;
-  Posisi = 2;
+  Power=10;
+  Usia=80;
+  PosisiX = 2;
+  PosisiY=2;
   ArahGerak = 2;
   Id = 1;
 
-  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<Posisi<<" ArahGerak: "<<ArahGerak<<" Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<" Usia : "<<Usia<<" Posisi :"<<PosisiX<<" PosisiY :"<<PosisiY<<" ArahGerak: "<<ArahGerak<<" Id: "<<Id<<endl;
   cout <<"ctor"<<endl;
 
 }
 
-Singa::Singa(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id){
-  Power = _Power;
-  Usia = _Usia;
-  Posisi = _Posisi;
+Singa::Singa(int _PosisiX,int _PosisiY, int _ArahGerak, int _Id){
+  Power=10;
+  Usia=80;
+  PosisiY = _PosisiY;
+  PosisiX = _PosisiX;
   ArahGerak = _ArahGerak;
   Id = _Id;
 
-  cout <<"Power :"<<Power<<" Usia:"<<Usia<<"Posisi :"<<Posisi<<"ArahGerak: "<<ArahGerak<<"Id: "<<Id<<endl;
+  cout <<"Power :"<<Power<<", Usia:"<<Usia<<", Posisi :"<<PosisiX<<" PosisiY :"<<PosisiY<<", ArahGerak: "<<ArahGerak<<", Id: "<<Id<<endl;
 }
 
 Singa::~Singa(){
@@ -42,28 +44,28 @@ void Singa::destruct(){
 void Singa::move(){
     switch(this->ArahGerak){
     case 1:
-      Posisi = Posisi+1 ;
+      PosisiX = PosisiX+1 ;
       break;
   case 2:
-    Posisi = Posisi+2 ;
+    PosisiX = PosisiX+2 ;
     break;
   case 3:
-    Posisi = Posisi+3 ;
+    PosisiX = PosisiX+3 ;
     break;
   case 4:
-    Posisi = Posisi+4 ;
+    PosisiX = PosisiX+4 ;
     break;
     case -1:
-      Posisi = Posisi-1 ;
+      PosisiX = PosisiX-1 ;
       break;
   case -2:
-    Posisi = Posisi-2 ;
+    PosisiX = PosisiX-2 ;
     break;
   case -3:
-    Posisi = Posisi-3 ;
+    PosisiX = PosisiX-3 ;
     break;
   case -4:
-    Posisi = Posisi-4 ;
+    PosisiX = PosisiX-4 ;
     break;
     this_thread::sleep_for(chrono::milliseconds(2000));
 }
@@ -82,8 +84,17 @@ int Singa::GetId(){
 int Singa::GetUsia(){
   return Usia;
 }
-int Singa::GetPosisi(){
-  return Posisi;
+int Singa::GetPosisiX(){
+  return PosisiX;
+}
+int Singa::GetPosisiY(){
+  return PosisiY;
+}
+void Singa::SetPosisiX(int _PosisiX){
+  PosisiX = _PosisiX;
+}
+void Singa::SetPosisiY(int _PosisiY){
+  PosisiY = _PosisiY;
 }
 int Singa::GetArahGerak(){
   return ArahGerak;
@@ -91,15 +102,17 @@ int Singa::GetArahGerak(){
 void Singa::SetArahGerak(int _ArahGerak){
   ArahGerak=_ArahGerak;
 }
-void Singa::SetPosisi(int _Posisi){
-  Posisi = _Posisi;
-}
+
 
 void Singa::SetUsia(int _usia){
   Usia = _usia;
 }
 
-int main(){
+int Singa::GetPower(){
+  return Power;
+}
+
+/*int main(){
   cout <<"Ini singa S -> ";
   Singa S;
   cout<<"Ini Singa S1 -> ";
@@ -125,3 +138,4 @@ int main(){
 
   return 0;
 }
+*/

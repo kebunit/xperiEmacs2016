@@ -13,7 +13,7 @@ class Kuda : public Herbivor{
   Kuda();    /**
      * Standard constructor, give default value of power, usia, posisi, arahgerak, id
      */
-    Kuda(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id);    /**
+    Kuda(int _PosisiX,int _PosisiY, int _ArahGerak, int _Id);    /**
      * Params constructor where you have to give all the parameter manually
      */
     ~Kuda();    /**
@@ -25,18 +25,24 @@ class Kuda : public Herbivor{
     int GetUsia();    /**
      * Return Usia of Kuda
      */
-    int GetPosisi();    /**
+    int GetPosisiX();    /**
      * Return Posisi of Kuda
      */
+     int GetPosisiY();    /**
+      * Return Posisi of Kuda
+      */
     int GetArahGerak();    /**
      * Return ArahGerak of Kuda
      */
     void SetArahGerak(int _ArahGerak);    /**
      * change ArahGerak, will be useful for fight() function
      */
-    void SetPosisi(int _Posisi);    /**
+    void SetPosisiX(int _PosisiX);    /**
      * Set Posisi of Kuda
      */
+     void SetPosisiY(int _PosisiY);    /**
+      * Set Posisi of Kuda
+      */
     void SetUsia(int _usia);
     void kill(int _id);    /**
      * Kill other creature, invoke other creature destruct()
@@ -53,6 +59,7 @@ class Kuda : public Herbivor{
     void Pass(Herbivor *K);    /**
      * when Kuda meet other Herbivor that isn't Kuda, they'll fight
      */
+      int GetPower();
   private:
     int Id;    /**
      *Unique id of Kuda

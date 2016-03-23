@@ -13,7 +13,7 @@ class Serigala : public Karnivor{
   Serigala();    /**
      * Standard constructor, give default value of power, usia, posisi, arahgerak, id
      */
-    Serigala(int _Power,int _Usia, int _Posisi, int _ArahGerak, int _Id);    /**
+    Serigala(int _PosisiX,int _PosisiY, int _ArahGerak, int _Id);    /**
      * Params constructor where you have to give all the parameter manually
      */
     ~Serigala();    /**
@@ -25,18 +25,24 @@ class Serigala : public Karnivor{
     int GetUsia();    /**
      * Return Usia of Serigala
      */
-    int GetPosisi();    /**
-     * Return Posisi of Serigala
+     int GetPosisiX();    /**
+      * Return Posisi of Jerapah
+      */
+      int GetPosisiY();    /**
+       * Return Posisi of Jerapah
+       */
+    void SetPosisiX(int _PosisiX);    /**
+     * Set Posisi of Jerapah
      */
+     void SetPosisiY(int _PosisiY);    /**
+      * Set Posisi of Jerapah*/
     int GetArahGerak();    /**
      * Return ArahGerak of Serigala
      */
     void SetArahGerak(int _ArahGerak);    /**
      * change ArahGerak, will be useful for fight() function
      */
-    void SetPosisi(int _Posisi);    /**
-     * Set Posisi of Serigala
-     */
+
     void SetUsia(int _usia);
     void kill(int _id);    /**
      * Kill other creature, invoke other creature destruct()
@@ -53,6 +59,7 @@ class Serigala : public Karnivor{
     void fight(Karnivor *K);    /**
      * when Serigala meet other karnivor that isn't Serigala, they'll fight
      */
+      int GetPower();
   private:
     int Id;    /**
      *Unique id of Serigala
