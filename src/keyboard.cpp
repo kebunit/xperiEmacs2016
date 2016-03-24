@@ -37,12 +37,14 @@ int main() {
     //setbuf(stdin, NULL);  // Optional: No buffering.
     while (c!='l') {
         if (kbhit()) { c = getchar(); }
+
         if (c=='l') {
             exit(0);
-        } else if (c=='s') {
-            // do something
         } else {
-            // selain s dan l
+
+        }
+        if (c=='s') {
+            // do something
         }
     }
 
