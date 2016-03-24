@@ -102,9 +102,10 @@ if (panjang <100){
 char c;
 while (c!='l'&&Sin.GetUsia()>0) {
         if (kbhit()) { c = getchar(); }
+        
         if (c=='l') {
             exit(0);
-        } else {
+        } else { // untuk Selain l dan s
             // selain s dan l 
 
             for(int x=0;x<panjang;x++)
@@ -359,6 +360,7 @@ while (c!='l'&&Sin.GetUsia()>0) {
             system("clear");
         }
 
+        // untuk S
         if (c=='s') {
             // do something
             this_thread::sleep_for(chrono::milliseconds(8000));
