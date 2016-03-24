@@ -31,21 +31,20 @@ int kbhit(void) {
 // main
 
 
-int main(int argc, char** argv) {
+int main() {
     char c;
     //setbuf(stdout, NULL); // Optional: No buffering.
     //setbuf(stdin, NULL);  // Optional: No buffering.
     while (c!='l') {
-        if (kbhit()) {
-            sleep(0);
+        if (kbhit()) { c = getchar(); }
+        if (c=='l') {
+            exit(0);
+        } else if (c=='s') {
+            // do something
+        } else {
+            // selain s dan l
         }
-        cout << c << endl;
-        c = getchar();
-        
     }
-    cout << "break : " << c << endl;
-    
-
 
     return 0;
 }
