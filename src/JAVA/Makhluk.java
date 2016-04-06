@@ -1,3 +1,6 @@
+package com.company.baru;
+
+
 public abstract class Makhluk {
 	/* data member */
 	protected int Power;

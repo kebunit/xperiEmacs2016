@@ -1,3 +1,5 @@
+package com.company.baru;
+
 public class Rumput extends Tumbuhan {
 	/* data member */
 	private int Id;

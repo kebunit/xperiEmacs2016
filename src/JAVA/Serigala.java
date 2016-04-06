@@ -1,3 +1,8 @@
+package com.company.baru;
+
+/**
+ * Class that represent serigala
+ */
 public class Serigala extends Karnivor {
 	/* data member */
 	private int Id;
@@ -61,33 +66,33 @@ public class Serigala extends Karnivor {
 	}
 	
 	/* methods */
-	public void move() {
+	public void move(int num) {
 		switch(ArahGerak){
 			case 1:
 				PosisiX = PosisiX+1 ;
 				break;
 			case 2:
-				PosisiX = PosisiX+2 ;
+				PosisiX = PosisiX+num ;
 				break;
 			case 3:
-				PosisiX = PosisiX+3 ;
+				PosisiX = PosisiX+num+1 ;
 				break;
 			case 4:
-				PosisiX = PosisiX+4 ;
+				PosisiX = PosisiX-num-1 ;
 				break;
 			case -1:
 				PosisiX = PosisiX-1 ;
 				break;
 			case -2:
-				PosisiX = PosisiX-2 ;
+				PosisiX = PosisiX-num ;
 				break;
 			case -3:
-				PosisiX = PosisiX-3 ;
+				PosisiX = PosisiX-num+1 ;
 				break;
 			case -4:
-				PosisiX = PosisiX-4 ;
+				PosisiX = PosisiX+num-1 ;
 				break;
-			//this_thread::sleep_for(chrono::milliseconds(2000));
+			// this_thread::sleep_for(chrono::milliseconds(2000));
 		}
 	}
 	public void fight() {

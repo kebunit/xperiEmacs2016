@@ -1,3 +1,4 @@
+package com.company.baru;
 public class Wortel extends Tumbuhan {
 	/* data member */
 	private int Id;
