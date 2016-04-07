@@ -1,4 +1,9 @@
 package com.company.baru;
+
+/**
+ * Class that represent wortel
+ */
+
 public class Wortel extends Tumbuhan {
 	/* data member */
 	private int Id;
@@ -6,25 +11,27 @@ public class Wortel extends Tumbuhan {
 	/* constructor */
 	public  Wortel() {
 		Power = 5;
-		Usia = 60;
+		Usia = 6;
 		PosisiX = 2;
 		PosisiY=2;
 		//ArahGerak = 2;
 		Id = 1;
+		rep ='W';
 
-		System.out.println("Power :"+Power+" Usia : "+Usia+" Posisi :"+PosisiX+" PosisiY :"+PosisiY+" Id: "+Id);
-		System.out.println("ctor");
+		//System.out.println("Power :"+Power+" Usia : "+Usia+" Posisi :"+PosisiX+" PosisiY :"+PosisiY+" Id: "+Id);
+		//System.out.println("ctor");
 	}
 	public Wortel(int _PosisiX,int _PosisiY, int _Id){
 		Power = 5;
-		Usia = 60;
+		Usia = 6;
 		PosisiX = _PosisiX;
 		PosisiY = _PosisiY;
 		//  ArahGerak = _ArahGerak;
 		Id = _Id;
+		rep = 'W';
 
-		System.out.println("Power :"+Power+" Usia:"+Usia+"Posisi :"+PosisiX+"Id: "+Id);
-		System.out.println("ctor by parameter");
+		//System.out.println("Power :"+Power+" Usia:"+Usia+"Posisi :"+PosisiX+"Id: "+Id);
+		//System.out.println("ctor by parameter");
 	}
 
 	/* getter */
@@ -52,7 +59,7 @@ public class Wortel extends Tumbuhan {
 		PosisiY = _PosisiY;
 	}
 	public void SetUsia(int _usia){
-		Usia = _usia;
+		Usia--;
 	}
 
 	/* methods */
@@ -66,7 +73,22 @@ public class Wortel extends Tumbuhan {
 		//only implement death by age
 		if (Usia == 0){
 			// destructor Wortel
+			try {
+				finalize();
+			} catch (Throwable throwable) {
+				throwable.printStackTrace();
+			}
 		}
+	}
+
+	public void SetRep(char _rep){
+		if (Usia <=0){
+			rep = '*';
+		}
+	}
+
+	public char GetRep(){
+		return rep;
 	}
 
 	/* unit test */

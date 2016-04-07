@@ -6,25 +6,27 @@ public class Kuda extends Herbivor {
 	/* constructor */
 	public  Kuda() {
 		Power=7;
-		Usia=75;
+		Usia=7;
 		PosisiX = 2;
 		PosisiY=2;
 		ArahGerak = 2;
 		Id = 1;
+		rep ='K';
 
-		System.out.println("Power :"+Power+" Usia : "+Usia+" PosisiX :"+PosisiX+" PosisiY :"+PosisiY+" ArahGerak: "+ArahGerak+" Id: "+Id);
-		System.out.println("ctor");
+		//System.out.println("Power :"+Power+" Usia : "+Usia+" PosisiX :"+PosisiX+" PosisiY :"+PosisiY+" ArahGerak: "+ArahGerak+" Id: "+Id);
+		//System.out.println("ctor");
 	}
 	public Kuda(int _PosisiX,int _PosisiY, int _ArahGerak, int _Id){
 		Power=7;
-		Usia=75;
+		Usia=7;
 		PosisiX = _PosisiX;
 		PosisiY = _PosisiY;
 		ArahGerak = _ArahGerak;
 		Id = _Id;
+		rep ='K';
 
-		System.out.println("Power :"+Power+" Usia : "+Usia+" PosisiX :"+PosisiX+" PosisiY :"+PosisiY+" ArahGerak: "+ArahGerak+" Id: "+Id);
-		System.out.println("ctor by parameter");
+		//System.out.println("Power :"+Power+" Usia : "+Usia+" PosisiX :"+PosisiX+" PosisiY :"+PosisiY+" ArahGerak: "+ArahGerak+" Id: "+Id);
+		//System.out.println("ctor by parameter");
 	}
 
 	/* getter */
@@ -58,7 +60,7 @@ public class Kuda extends Herbivor {
 		PosisiY= _PosisiY;
 	}
 	public void SetUsia(int _usia){
-		Usia = _usia;
+		Usia--;
 	}
 
 	/* methods */
@@ -104,9 +106,22 @@ public class Kuda extends Herbivor {
 		//only implement death by age
 		if (Usia == 0){
 			// destructor Kuda
+			try {
+				finalize();
+			} catch (Throwable throwable) {
+				throwable.printStackTrace();
+			}
+		}
+	}
+	public void SetRep(char _rep){
+		if (Usia <=0){
+			rep = '*';
 		}
 	}
 
+	public char GetRep(){
+		return rep;
+	}
 	/* unit test */
 	/*
 	public static void main(String[] args) {

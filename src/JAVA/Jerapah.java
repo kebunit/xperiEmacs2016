@@ -7,25 +7,27 @@ public class Jerapah extends Herbivor {
 	/* constructor */
 	public  Jerapah() {
 		Power=8;
-		Usia=70;
+		Usia=7;
 		PosisiX = 2;
 		PosisiY=2;
 		ArahGerak = 2;
 		Id = 1;
+		rep ='J';
 
-		System.out.println("Power :"+Power+" Usia : "+Usia+" Posisi :"+PosisiX+" PosisiY :"+PosisiY+" ArahGerak: "+ArahGerak+" Id: "+Id);
-		System.out.println("ctor");
+		//System.out.println("Power :"+Power+" Usia : "+Usia+" Posisi :"+PosisiX+" PosisiY :"+PosisiY+" ArahGerak: "+ArahGerak+" Id: "+Id);
+		//System.out.println("ctor");
 	}
 	public Jerapah(int _PosisiX,int _PosisiY, int _ArahGerak, int _Id){
 		Power=8;
-		Usia=70;
+		Usia=7;
 		PosisiX = _PosisiX;
 		PosisiY = _PosisiY;
 		ArahGerak = _ArahGerak;
 		Id = _Id;
+		rep ='J';
 
-		System.out.println("Power :"+Power+" Usia : "+Usia+" Posisi :"+PosisiX+" PosisiY :"+PosisiY+" ArahGerak: "+ArahGerak+" Id: "+Id);
-		System.out.println("ctor by parameter");
+		//System.out.println("Power :"+Power+" Usia : "+Usia+" Posisi :"+PosisiX+" PosisiY :"+PosisiY+" ArahGerak: "+ArahGerak+" Id: "+Id);
+		//System.out.println("ctor by parameter");
 	}
 
 	/* getter */
@@ -59,7 +61,7 @@ public class Jerapah extends Herbivor {
 		ArahGerak=_ArahGerak;
 	}
 	public void SetUsia(int _usia){
-		Usia = _usia;
+		Usia--;
 	}
 
 	/* methods */
@@ -103,9 +105,24 @@ public class Jerapah extends Herbivor {
 	}
 	public void destruct() {
 		//only implement death by age
-		if (Usia == 0){
+		if (Usia <= 0){
 			// destructor Jerapah
+			try {
+				finalize();
+			} catch (Throwable throwable) {
+				throwable.printStackTrace();
+			}
 		}
+	}
+
+	public void SetRep(char _rep){
+		if (Usia <=0){
+			rep = '*';
+		}
+	}
+
+	public char GetRep(){
+		return rep;
 	}
 
 	/* unit test */
